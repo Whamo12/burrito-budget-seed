@@ -10,7 +10,7 @@ import { AppService } from './app.service';
 })
 
 export class AppComponent implements OnInit {
-  //Initialize budget, budget[], and categories
+  //Initialize budget, budget[], and categories[]
   error: Error;
   totalBurritos: number = 0;
 
@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
 
   //Lifecycle hook that is called after data-bound properties of a directive are initialized.
   ngOnInit(): void {
-    this.getAllBudgets();
-    this.getCategories();
+    //this.getAllBudgets();
+    //this.getCategories();
   }
 
   //Gets all categories from the database
@@ -43,10 +43,21 @@ export class AppComponent implements OnInit {
   //Iterates through budget arrary
   //grabs budget.id
   //deletes each 
+  /*
   reset(): void {
-
+    if (confirm("Are you sure to reset your burrito budget?")) {
+      for (let budget of this.budgets) {
+        this.appService.resetBudget(budget.id)
+          .then(success => {
+            this.getAllBudgets();
+            this.totalBurritos = 0;
+          })
+          .catch(error => this.error = error);
+      }
+    }
   }
-  
+  */
+
   //If category is income == green
   //else category == red
   getStyle(id: number) {
