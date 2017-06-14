@@ -18,6 +18,8 @@ Install [json-server](https://github.com/typicode/json-server)
 To install the project dependencies, you will need to install [Yarn](https://yarnpkg.com/en/docs/install).
 * `brew update`
 * `npm install -g yarn`
+*  cd to project and install dependencies `yarn`
+
 
 ## Development server
 
